@@ -11,10 +11,12 @@ const EventModal = ({
 }) => {
   return (
     <div className="fixed inset-0 bg-slate-800 bg-opacity-85 flex items-center justify-center">
+      
       <div className="bg-white rounded-lg p-6 w-96">
         <h3 className="text-3xl font-anton font-bold mb-4  bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent" >
           {isEditing ? "Edit Event" : "Add Event"}
         </h3>
+       
         <input
           type="text"
           placeholder="Event name"
@@ -24,6 +26,7 @@ const EventModal = ({
             setFormData({ ...formData, name: e.target.value })
           }
         />
+       
         <h2 className="font-anton bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent">Start time:</h2>
         <input
           type="time"
@@ -33,6 +36,7 @@ const EventModal = ({
             setFormData({ ...formData, startTime: e.target.value })
           }
         />
+       
         <h2 className="font-anton bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent">End time:</h2>
         <input
           type="time"
@@ -42,6 +46,7 @@ const EventModal = ({
             setFormData({ ...formData, endTime: e.target.value })
           }
         />
+       
         <textarea
           placeholder="Optional description"
           className="w-full border rounded p-2 mb-4"
@@ -50,6 +55,8 @@ const EventModal = ({
             setFormData({ ...formData, description: e.target.value })
           }
         ></textarea>
+       
+       
         <div className="flex justify-end space-x-2">
           <Button
                   variant="outline"
@@ -66,6 +73,7 @@ const EventModal = ({
             {isEditing ? "Save Changes" : "Add Event"}
           </Button>
         </div>
+      
       </div>
     </div>
   );

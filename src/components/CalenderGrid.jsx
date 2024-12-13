@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const CalendarGrid = ({
   calendarDays,
   today,
@@ -16,7 +17,7 @@ const CalendarGrid = ({
   const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   // Generate calendar days with proper alignment
-  const generateAlignedCalendarDays = () => {
+  const generateAlignedCalendarDays = () => {   //Calculates and aligns days in the grid with padding for empty slots
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
     const firstDay = new Date(currentYear, currentMonth, 1).getDay();
     const adjustedFirstDay = (firstDay + 6) % 7; // Adjust for Monday start
@@ -42,8 +43,8 @@ const CalendarGrid = ({
 
   // Parse the filter date for highlighting
   const filterDateObj = filterDate ? new Date(filterDate) : null;
-  const filterDay =
-    filterDateObj &&
+  const filterDay =             //Determines if a filtered date is within the current month and year
+    filterDateObj && 
     filterDateObj.getFullYear() === currentYear &&
     filterDateObj.getMonth() === currentMonth
       ? filterDateObj.getDate()
@@ -51,7 +52,7 @@ const CalendarGrid = ({
 
   return (
     <div className="grid grid-cols-7 gap-2 p-4 font-bazerd text-[1rem] sm:text-xl">
-      {weekdays.map((day) => (
+      {weekdays.map((day) => (         //Grid with 7 columns
         <div key={day} className="text-center font-bold">
           {day}
         </div>

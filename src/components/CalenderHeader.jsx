@@ -1,7 +1,10 @@
-// CalendarHeader.js
+// CalendarHeader.js:
+//Displays the current month and year with navigation buttons for the previous and next months.
+//Provides a visually appealing header with a gradient background and responsive typography.
+
 import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"  //imported from shadcn ui library
 
 
 const CalendarHeader = ({ currentDate, handlePrevMonth, handleNextMonth }) => {
