@@ -27,7 +27,7 @@ The Organizo is a dynamic calendar application built with React.js for efficient
 7)UI Design: Clean and responsive UI built using the shadcn component library.
 
 # These features were completed and deployed successfully on Vercel.
-# Check this application :  
+# Check this application :  https://organizo.onrender.com
 
 
 # Commands for running the Project:
