@@ -55,7 +55,7 @@ const Calendar = () => {
 
   const openModal = (day) => {      //Open the modal to add or edit events for a selected date.
     if (day) {
-      setSelectedDate(`${currentYear}-${currentMonth + 1}-${day}`);
+      setSelectedDate(`${day}-${currentMonth + 1}-${currentYear}`);
       setShowModal(true);
     }
   };
