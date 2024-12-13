@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const FilterBar = ({ filterDate, setFilterDate, handleFilterSearch, goToToday }) => {
   return (
-    <div className="flex justify-between items-center p-4 ">
+    <div className="flex justify-between items-center px-4 pb-4 ">
       <input
         type="date"
         value={filterDate}

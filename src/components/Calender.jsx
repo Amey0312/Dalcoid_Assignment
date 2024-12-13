@@ -101,9 +101,9 @@ const Calendar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-700 to-black p-4 flex flex-col sm:flex-row">
+    <div className="min-h-screen bg-gradient-to-r from-gray-700 to-black p-6 flex flex-col sm:flex-row">
       {/* Div-1 */}
-      <div className="max-w-3xl mx-1 sm:mx-0 sm:ml-[10rem] bg-gradient-to-r from-amber-100 to-emerald-100 rounded-2xl">
+      <div className="max-w-3xl mx-auto sm:mx-0 sm:ml-[10rem] bg-gradient-to-r from-amber-100 to-emerald-100 rounded-2xl">
         <CalendarHeader     //Calendar header-Displays the month/year and navigation controls
           currentDate={currentDate}
           handlePrevMonth={handlePrevMonth}
@@ -118,6 +118,7 @@ const Calendar = () => {
           filterDate={filterDate}
           openModal={openModal}
         />
+        <p className="ml-6 font-bazerd text-xs sm:text-lg ">Search date:</p>
         <FilterBar     //Provides a UI for filtering the calendar by date.
           filterDate={filterDate}
           setFilterDate={setFilterDate}
